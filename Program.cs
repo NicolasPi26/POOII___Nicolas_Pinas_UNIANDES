@@ -1,4 +1,4 @@
-namespace TareaN3_Semana3_Nicolas_Piñas
+namespace Gestion_Donaciones
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace TareaN3_Semana3_Nicolas_Piñas
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new login());
+            Application.Run(new Form1());
         }
     }
 }
