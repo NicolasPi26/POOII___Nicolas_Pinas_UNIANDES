@@ -1,4 +1,4 @@
-﻿namespace Gestion_Donaciones
+﻿namespace Tarea4_Semana4_POOII
 {
     partial class Form1
     {
@@ -28,116 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
-            label2 = new Label();
-            txtUsuario = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            txtContrasenia = new TextBox();
-            label3 = new Label();
-            lblIntentos = new Label();
+            txtNumero = new TextBox();
+            PanelImagen = new Panel();
+            pictureBox1 = new PictureBox();
+            btnIniciar = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            lblEstado = new Label();
+            PanelImagen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(80, 23);
+            label1.Font = new Font("Segoe UI Historic", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(23, 38);
             label1.Name = "label1";
-            label1.Size = new Size(78, 19);
+            label1.Size = new Size(130, 20);
             label1.TabIndex = 0;
-            label1.Text = "ONG Piñas";
+            label1.Text = "Subir su Imagen";
             // 
-            // label2
+            // txtNumero
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(20, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(57, 19);
-            label2.TabIndex = 1;
-            label2.Text = "Usuario";
+            txtNumero.Location = new Point(23, 70);
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(142, 23);
+            txtNumero.TabIndex = 1;
+            txtNumero.KeyPress += txtNumero_KeyPress;
             // 
-            // txtUsuario
+            // PanelImagen
             // 
-            txtUsuario.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtUsuario.Location = new Point(20, 84);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.PlaceholderText = "Ingresar usuario...";
-            txtUsuario.Size = new Size(219, 25);
-            txtUsuario.TabIndex = 2;
+            PanelImagen.AllowDrop = true;
+            PanelImagen.Controls.Add(pictureBox1);
+            PanelImagen.Location = new Point(23, 113);
+            PanelImagen.Name = "PanelImagen";
+            PanelImagen.Size = new Size(227, 130);
+            PanelImagen.TabIndex = 2;
+            PanelImagen.DragDrop += PanelImagen_DragDrop;
+            PanelImagen.DragEnter += PanelImagen_DragEnter;
             // 
-            // button1
+            // pictureBox1
             // 
-            button1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(20, 220);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 34);
-            button1.TabIndex = 3;
-            button1.Text = "Inciar sesion";
-            button1.UseVisualStyleBackColor = true;
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(227, 130);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // button2
+            // btnIniciar
             // 
-            button2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(149, 220);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 34);
-            button2.TabIndex = 4;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = true;
+            btnIniciar.Location = new Point(171, 70);
+            btnIniciar.Name = "btnIniciar";
+            btnIniciar.Size = new Size(88, 23);
+            btnIniciar.TabIndex = 4;
+            btnIniciar.Text = "Iniciar Timer";
+            btnIniciar.UseVisualStyleBackColor = true;
+            btnIniciar.Click += btnIniciar_Click;
             // 
-            // txtContrasenia
+            // timer1
             // 
-            txtContrasenia.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtContrasenia.Location = new Point(20, 141);
-            txtContrasenia.Name = "txtContrasenia";
-            txtContrasenia.PlaceholderText = "Ingresar contraseña...";
-            txtContrasenia.Size = new Size(219, 25);
-            txtContrasenia.TabIndex = 6;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
-            // label3
+            // lblEstado
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(20, 117);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 19);
-            label3.TabIndex = 5;
-            label3.Text = "Contraseña";
-            // 
-            // lblIntentos
-            // 
-            lblIntentos.AutoSize = true;
-            lblIntentos.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIntentos.ForeColor = Color.Red;
-            lblIntentos.Location = new Point(20, 182);
-            lblIntentos.Name = "lblIntentos";
-            lblIntentos.Size = new Size(47, 19);
-            lblIntentos.TabIndex = 7;
-            lblIntentos.Text = "label4";
-            lblIntentos.Visible = false;
+            lblEstado.AutoSize = true;
+            lblEstado.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEstado.ForeColor = Color.FromArgb(255, 128, 128);
+            lblEstado.Location = new Point(23, 258);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(128, 20);
+            lblEstado.TabIndex = 5;
+            lblEstado.Text = "Estado: Detenido";
+            lblEstado.Click += lblEstado_Click;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(251, 272);
-            ControlBox = false;
-            Controls.Add(lblIntentos);
-            Controls.Add(txtContrasenia);
-            Controls.Add(label3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(txtUsuario);
-            Controls.Add(label2);
+            ClientSize = new Size(285, 313);
+            Controls.Add(lblEstado);
+            Controls.Add(btnIniciar);
+            Controls.Add(PanelImagen);
+            Controls.Add(txtNumero);
             Controls.Add(label1);
-            Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Margin = new Padding(4);
-            MaximizeBox = false;
-            MinimizeBox = false;
             Name = "Form1";
-            Text = "Gestion de donaciones";
+            Text = "Form1";
+            PanelImagen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -145,12 +126,11 @@
         #endregion
 
         private Label label1;
-        private Label label2;
-        private TextBox txtUsuario;
-        private Button button1;
-        private Button button2;
-        private TextBox txtContrasenia;
-        private Label label3;
-        private Label lblIntentos;
+        private TextBox txtNumero;
+        private Panel PanelImagen;
+        private Button btnIniciar;
+        private System.Windows.Forms.Timer timer1;
+        private Label lblEstado;
+        private PictureBox pictureBox1;
     }
 }

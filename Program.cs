@@ -1,4 +1,4 @@
-namespace Gestion_Donaciones
+namespace Tarea4_Semana4_POOII
 {
     internal static class Program
     {
